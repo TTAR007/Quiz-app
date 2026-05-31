@@ -6,9 +6,33 @@
     <title>Question</title>
 
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/question.css">
 </head>
 <body>
-    <p>ABC</p>
+    <header>
+        <h1>Vacation Quiz</h1>
+        <p class="description">Answer the following questions to find out your ideal vacation destination!</p>
+    </header>
+
+    <main>
+        <h2>Question 1: What type of climate do you prefer?</h2>
+        <form>
+            <label class="option-box">
+                <input type="radio" name="q1" value="tropical"> 
+                <span class="option-text">Tropical</span>
+            </label>
+            <label class="option-box">
+                <input type="radio" name="q1" value="temperate"> 
+                <span class="option-text">Temperate</span>
+            </label>
+            <label class="option-box">
+                <input type="radio" name="q1" value="cold"> 
+                <span class="option-text">Cold</span>
+            </label>
+        </form>
+        <button class="next-button">Next</button>
+    </main>
+
+    <script src="scripts/question.js" type="module"></script>
 </body>
 </html>

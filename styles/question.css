@@ -1,0 +1,84 @@
+main {
+    margin: 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.option-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    position: relative;
+}
+
+.option-box:hover {
+    background: var(--color-surface-hover);
+    border-color: var(--color-border-strong);
+}
+
+.option-box:active {
+    background: var(--color-surface-active);
+    border-color: var(--color-border-strong);
+}
+
+.option-box:has(input[type="radio"]:checked) {
+    background: var(--color-selected-bg);
+    border-color: var(--color-primary);
+}
+
+.option-box:has(input[type="radio"]:checked):hover {
+    background: var(--color-selected-bg-hover);
+}
+
+.option-box:focus-within {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    right: 10%;
+}
+
+.next-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s, box-shadow 0.15s;
+    font-weight: 500;
+}
+
+.next-button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.next-button:active {
+    background-color: var(--color-primary-active);
+}
+
+.next-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.hide {
+    display: none;
+}

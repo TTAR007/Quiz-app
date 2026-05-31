@@ -6,6 +6,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 600px;
 }
 
 .quiz-link {
@@ -14,19 +15,25 @@ main {
     height: 100%;
     padding: 1rem;
     text-decoration: none;
-    border: 2px solid #a855f7;
+    border: 2px solid var(--color-border);
     border-radius: 4px;
-    background: linear-gradient(135deg, #fff1f2 0%, #eff6ff 100%);
-    color: #0f172a;
-    transition: background-color 0.3s, border-color 0.3s;
+    background: var(--color-surface);
+    color: var(--color-text);
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
 }
 
 .quiz-link:hover {
-    background: linear-gradient(135deg, #ecfeff 0%, #fef9c3 100%);
-    border-color: #06b6d4;
+    background: var(--color-surface-hover);
+    border-color: var(--color-border-strong);
 }
 
 .quiz-link:active {
-    background: linear-gradient(135deg, #fae8ff 0%, #dbeafe 100%);
-    border-color: #2563eb;
+    background: var(--color-surface-active);
+    border-color: var(--color-border-strong);
+}
+
+.quiz-link:focus-visible {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
 }
