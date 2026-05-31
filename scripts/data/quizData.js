@@ -1,3 +1,5 @@
+export let quizArray = []
+
 export class Quiz {
     #quizName
     #questions
@@ -6,6 +8,6 @@ export class Quiz {
     constructor(quizName, questions) {
         this.#quizName = quizName
         this.#questions = questions
-        this.#score = 0
+        this.#score = this.#questions.length
     }
 }
