@@ -1,4 +1,6 @@
-export let quizArray = []
+import { Question } from "./questionData.js";
+
+export let quizArray = JSON.parse(localStorage.getItem("quizArray")) || []
 
 export class Quiz {
     #name
@@ -14,4 +16,24 @@ export class Quiz {
     get name() {
         return this.#name
     }
+
+    toJSON() {
+        return {
+            name: this.#name,
+            questions: this.#questions,
+            score: this.#score
+        }
+    }
+}
+
+// make it as class instance
+export function makeInstance() {
+    quizArray = quizArray.map(
+        quiz => {
+            const questions = quiz.questions.map(
+                question => new Question(question.questionName, question.options, question.answer)
+            )
+            return new Quiz(quiz.name, questions)
+        }
+    )
 }
