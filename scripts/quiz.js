@@ -23,6 +23,7 @@ import { Quiz, quizArray, makeInstance } from "./data/quizData.js";
 //     new Question("What ancient civilization built the Machu Picchu?", ["Inca", "Maya", "Aztec"], "Inca")
 // ]))
 
+console.log(quizArray)
 makeInstance()
 console.log(quizArray)
 

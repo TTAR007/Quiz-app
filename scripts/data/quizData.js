@@ -17,6 +17,14 @@ export class Quiz {
         return this.#name
     }
 
+    get questions() {
+        return this.#questions
+    }
+
+    get score() {
+        return this.#score
+    }
+
     toJSON() {
         return {
             name: this.#name,
