@@ -12,6 +12,13 @@ if (!quizParam) {
 
 const quizArray = makeInstance(JSON.parse(localStorage.getItem("quizArray")) || [])
 
+if (quizArray.length === 0) {
+    alert("No quizzes available. Redirecting to quiz page.")
+    setTimeout(() => {
+        window.location.href = "quiz.html"
+    }, 1000)
+}
+
 console.log(param)
 console.log(quizArray)
 // current quiz
@@ -63,13 +70,12 @@ nextButton.addEventListener("click", () => {
         userScore++
     }
 
-    if (currentQuestionIndex < selectedQuiz.questions.length - 1) {
-        currentQuestionIndex++
+    currentQuestionIndex++
+    if (currentQuestionIndex < selectedQuiz.questions.length) {
         displayQuestion()
         nextButton.classList.add("hide")
         console.log(`User's score: ${userScore}`)
     } else {
-        alert(`Quiz completed! Your score: ${userScore}/${selectedQuiz.score}`)
         showSummary()
     }
 })
