@@ -70,5 +70,38 @@ nextButton.addEventListener("click", () => {
         console.log(`User's score: ${userScore}`)
     } else {
         alert(`Quiz completed! Your score: ${userScore}/${selectedQuiz.score}`)
+        showSummary()
     }
 })
+
+// summary of the quiz
+function showSummary() {    
+    document.querySelector("h1").textContent = `${selectedQuiz.name} - Summary`
+    document.querySelector(".description").textContent = `Your score: ${userScore}/${selectedQuiz.score}`
+    document.querySelector("h2").classList.add("hide")
+
+    let summaryHTML = ``
+    
+    selectedQuiz.questions.forEach((question, index) => {
+        summaryHTML += `
+        <div class="summary-question">
+            <h3>${index + 1}. ${question.questionName}</h3>
+            <p>Answer: <strong>${question.answer}</strong></p>
+        </div>
+        `
+    })
+    document.querySelector("form").innerHTML = summaryHTML
+
+    document.querySelector(".next-button").classList.add("hide")
+    document.querySelector("main").appendChild(
+        (() => {
+            const backButton = document.createElement("button")
+            backButton.textContent = "Back to Quiz List"
+            backButton.classList.add("back-button")
+            backButton.addEventListener("click", () => {
+                window.location.href = "quiz.html"
+            })
+            return backButton
+        })() // call the function immediately to create the button element and return it
+    )
+}
