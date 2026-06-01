@@ -79,6 +79,46 @@ input[type="radio"] {
     box-shadow: 0 0 0 3px var(--color-focus-ring);
 }
 
+.summary-question {
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    padding: 1rem;
+    background: var(--color-surface);
+}
+
+.summary-question h3 {
+    font-weight: 500;
+}
+
+.summary-question p {
+    color: green; 
+}
+
+.back-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s, box-shadow 0.15s;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.back-button:active {
+    background-color: var(--color-primary-active);
+}
+
+.back-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
 .hide {
     display: none;
 }
