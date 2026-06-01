@@ -7,7 +7,7 @@ let quizParam = param ? decodeURIComponent(param) : null
 
 if (!quizParam) {
     alert("No quiz selected. Redirecting to quiz page.")
-    window.location.href = "quiz.html"
+    window.location.href = "index.html"
 }
 
 const quizArray = makeInstance(JSON.parse(localStorage.getItem("quizArray")) || [])
@@ -15,7 +15,7 @@ const quizArray = makeInstance(JSON.parse(localStorage.getItem("quizArray")) || 
 if (quizArray.length === 0) {
     alert("No quizzes available. Redirecting to quiz page.")
     setTimeout(() => {
-        window.location.href = "quiz.html"
+        window.location.href = "index.html"
     }, 1000)
 }
 
@@ -105,7 +105,7 @@ function showSummary() {
             backButton.textContent = "Back to Quiz List"
             backButton.classList.add("back-button")
             backButton.addEventListener("click", () => {
-                window.location.href = "quiz.html"
+                window.location.href = "index.html"
             })
             return backButton
         })() // call the function immediately to create the button element and return it

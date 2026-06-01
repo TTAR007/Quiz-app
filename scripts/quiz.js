@@ -27,7 +27,7 @@ console.log(quizArray)
 makeInstance()
 console.log(quizArray)
 
-// display all quiz in the quiz.html page
+// display all quiz in the index.html page
 let quizHTML = ``
 quizArray.forEach((quiz) => {
     quizHTML += `
