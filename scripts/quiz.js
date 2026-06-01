@@ -23,6 +23,8 @@ quizArray.push(new Quiz("History", [
     new Question("What ancient civilization built the Machu Picchu?", ["Inca", "Maya", "Aztec"], "Inca")
 ]))
 
+saveToLocalStorage()
+
 console.log(quizArray)
 makeInstance()
 console.log(quizArray)
