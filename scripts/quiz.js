@@ -22,7 +22,7 @@ quizArray.push(new Quiz("History", [
     new Question("Who was the leader of the Soviet Union during World War II?", ["Joseph Stalin", "Vladimir Lenin", "Leon Trotsky"], "Joseph Stalin"),
     new Question("What ancient civilization built the Machu Picchu?", ["Inca", "Maya", "Aztec"], "Inca")
 ]))
-
+// don't have adding quiz function yet, so I will add some quizzes here for testing purpose
 saveToLocalStorage()
 
 console.log(quizArray)
